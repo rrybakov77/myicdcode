@@ -1,0 +1,165 @@
+.page { min-height: 100vh; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(160deg, #0A1628 0%, #0D2040 60%, #0A1628 100%);
+  padding: 64px 24px;
+  border-bottom: 0.5px solid var(--border);
+}
+.heroContent { max-width: 680px; margin: 0 auto; text-align: center; }
+.eyebrow {
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--blue);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.heroTitle {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  margin-bottom: 16px;
+}
+.heroSub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+.ctaBtn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity .15s;
+}
+.ctaBtn:hover { opacity: .88; }
+
+/* Stats */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 0.5px solid var(--border);
+}
+.statCell {
+  padding: 24px;
+  text-align: center;
+  border-right: 0.5px solid var(--border);
+}
+.statCell:last-child { border-right: none; }
+.statNum { font-size: 26px; font-weight: 600; color: var(--blue); letter-spacing: -.02em; }
+.statLabel { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+/* Body */
+.body { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+.section { margin-bottom: 48px; }
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -.01em;
+}
+.sectionSub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.section p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+/* Audience grid */
+.audienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.audienceCard {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: border-color .15s;
+}
+.audienceCard:hover { border-color: var(--border-strong); }
+.audienceIcon { font-size: 24px; margin-bottom: 10px; }
+.audienceTitle { font-size: 14px; font-weight: 600; margin-bottom: 5px; color: var(--text-primary); }
+.audienceDesc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* Ad table */
+.adTable {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.adTableHeader {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr 1fr;
+  padding: 10px 16px;
+  background: var(--surface-hover);
+  border-bottom: 0.5px solid var(--border);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  gap: 12px;
+}
+.adTableRow {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr 1fr;
+  padding: 14px 16px;
+  border-bottom: 0.5px solid var(--border);
+  gap: 12px;
+  align-items: center;
+  transition: background .1s;
+}
+.adTableRow:last-child { border-bottom: none; }
+.adTableRow:hover { background: var(--surface-hover); }
+.adName { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+.adLocation { font-size: 13px; color: var(--text-secondary); }
+.adSize { font-size: 12px; font-family: var(--mono); color: var(--text-muted); }
+.adCpm { font-size: 13px; color: var(--blue); font-weight: 500; }
+
+/* Contact section */
+.contactSection {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  text-align: center;
+}
+.contactSection h2 { font-size: 24px; font-weight: 600; margin-bottom: 10px; }
+.contactSection p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px; }
+.contactBtn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity .15s;
+  margin-bottom: 16px;
+}
+.contactBtn:hover { opacity: .88; }
+.contactNote { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+
+@media (max-width: 600px) {
+  .statsRow { grid-template-columns: repeat(2, 1fr); }
+  .adTableHeader, .adTableRow { grid-template-columns: 1fr 1fr; }
+  .adSize, .adCpm { display: none; }
+}

@@ -1,0 +1,16 @@
+.footer {
+  border-top: 0.5px solid var(--border);
+  padding: clamp(18px,3vw,24px) var(--page-px);
+  margin-top: auto;
+}
+.inner {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.left { display: flex; flex-direction: column; gap: 3px; }
+.brand { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.copy { font-size: 12px; color: var(--text-muted); max-width: 400px; line-height: 1.5; }
+.links { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.links a { font-size: 12px; color: var(--text-muted); transition: color .15s; }
+.links a:hover { color: var(--text-secondary); }
+.stormglass { font-size: 11px; color: var(--text-muted); opacity: .5; }
