@@ -2,13 +2,13 @@
 .container { max-width: 760px; margin: 0 auto; }
 
 .header { margin-bottom: 28px; }
-.eyebrow { font-size: 12px; font-family: var(--mono); color: var(--blue); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+.eyebrow { font-size: 12px; font-family: var(--mono); color: var(--accent); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
 .title { font-size: clamp(24px,4vw,32px); font-weight: 600; margin-bottom: 8px; letter-spacing: -.02em; }
 .meta { font-size: 13px; color: var(--text-muted); }
 
 .card {
   background: var(--surface); border: 0.5px solid var(--border);
-  border-left: 3px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0;
+  border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0;
   padding: clamp(14px,3vw,20px) clamp(16px,3vw,24px); margin-bottom: 28px;
 }
 .intro { font-size: clamp(13px,2vw,15px); color: var(--text-secondary); line-height: 1.7; }
@@ -19,7 +19,7 @@
 .section p { font-size: 14px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 10px; }
 .section ul { padding-left: 18px; margin: 8px 0 12px; }
 .section ul li { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 4px; }
-.section a { color: var(--blue); }
+.section a { color: var(--accent); }
 .section a:hover { text-decoration: underline; }
 
 .warningBox {
@@ -34,4 +34,4 @@
   border-radius: var(--radius); padding: 16px 20px;
   font-size: 14px; color: var(--text-secondary); line-height: 1.9;
 }
-.contactBlock a { color: var(--blue); }
+.contactBlock a { color: var(--accent); }

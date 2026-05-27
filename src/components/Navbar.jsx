@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { searchCodes } from '../data/search.js';
+import ThemeSwitcher from './ThemeSwitcher.jsx';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -26,11 +27,7 @@ export default function Navbar() {
     return () => document.removeEventListener('mousedown', handler);
   }, []);
 
-  const go = (code) => {
-    setQuery('');
-    setOpen(false);
-    navigate(`/code/${code}`);
-  };
+  const go = (code) => { setQuery(''); setOpen(false); navigate(`/code/${code}`); };
 
   const submit = (e) => {
     e.preventDefault();
@@ -71,9 +68,7 @@ export default function Navbar() {
                 {r.isNew && <span className={styles.newPill}>New</span>}
               </button>
             ))}
-            <button className={styles.dropMore} onClick={submit}>
-              See all results →
-            </button>
+            <button className={styles.dropMore} onClick={submit}>See all results →</button>
           </div>
         )}
       </div>
@@ -81,7 +76,7 @@ export default function Navbar() {
       <div className={styles.navRight}>
         <Link to="/browse" className={styles.navLink}>Browse</Link>
         <Link to="/about" className={styles.navLink}>About</Link>
-        <span className={styles.fyBadge}>FY 2026</span>
+        <ThemeSwitcher />
       </div>
     </nav>
   );

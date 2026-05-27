@@ -10,7 +10,7 @@
 .eyebrow {
   font-size: 12px;
   font-family: var(--mono);
-  color: var(--blue);
+  color: var(--accent);
   letter-spacing: .08em;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -32,7 +32,7 @@
 .ctaBtn {
   display: inline-block;
   padding: 12px 28px;
-  background: var(--blue);
+  background: var(--accent);
   color: #fff;
   border-radius: var(--radius);
   font-size: 15px;
@@ -54,7 +54,7 @@
   border-right: 0.5px solid var(--border);
 }
 .statCell:last-child { border-right: none; }
-.statNum { font-size: 26px; font-weight: 600; color: var(--blue); letter-spacing: -.02em; }
+.statNum { font-size: 26px; font-weight: 600; color: var(--accent); letter-spacing: -.02em; }
 .statLabel { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
 
 /* Body */
@@ -131,7 +131,7 @@
 .adName { font-size: 14px; font-weight: 500; color: var(--text-primary); }
 .adLocation { font-size: 13px; color: var(--text-secondary); }
 .adSize { font-size: 12px; font-family: var(--mono); color: var(--text-muted); }
-.adCpm { font-size: 13px; color: var(--blue); font-weight: 500; }
+.adCpm { font-size: 13px; color: var(--accent); font-weight: 500; }
 
 /* Contact section */
 .contactSection {
@@ -146,7 +146,7 @@
 .contactBtn {
   display: inline-block;
   padding: 12px 24px;
-  background: var(--blue);
+  background: var(--accent);
   color: #fff;
   border-radius: var(--radius);
   font-size: 14px;

@@ -94,6 +94,13 @@
       }
     }
     </script>
+  <!-- Theme init — runs before React to prevent flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('myicdcode-theme') || 'navy';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   </head>
   <body>
     <div id="root"></div>

@@ -9,8 +9,8 @@
   cursor: pointer;
 }
 .card:hover {
-  border-color: var(--blue-border);
-  background: var(--blue-dim);
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
   transform: translateY(-1px);
 }
 
@@ -26,9 +26,9 @@
   font-family: var(--mono);
   font-size: 13px;
   font-weight: 500;
-  color: var(--blue);
-  background: var(--blue-dim);
-  border: 0.5px solid var(--blue-border);
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 0.5px solid var(--accent-border);
   padding: 3px 8px;
   border-radius: var(--radius-sm);
   flex-shrink: 0;
@@ -74,7 +74,7 @@
 
 .arrow {
   font-size: 14px;
-  color: var(--blue);
+  color: var(--accent);
   opacity: 0;
   transition: opacity .15s;
 }
