@@ -1,5 +1,5 @@
-// ICD-10-CM Chapter 16: Perinatal conditions
-// 565 codes — Auto-generated 2026-05-26
+// ICD-10-CM Chapter 16 — 565 codes
+// Updated: 2026-05-27
 // StormGlass Interactive Inc.
 
 export const CODES = [

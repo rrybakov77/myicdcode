@@ -1,5 +1,5 @@
-// ICD-10-CM Chapter 18: Symptoms and abnormal clinical findings
-// 962 codes — Auto-generated 2026-05-26
+// ICD-10-CM Chapter 18 — 962 codes
+// Updated: 2026-05-27
 // StormGlass Interactive Inc.
 
 export const CODES = [

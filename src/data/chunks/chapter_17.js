@@ -1,5 +1,5 @@
-// ICD-10-CM Chapter 17: Congenital malformations
-// 1,086 codes — Auto-generated 2026-05-26
+// ICD-10-CM Chapter 17 — 1,086 codes
+// Updated: 2026-05-27
 // StormGlass Interactive Inc.
 
 export const CODES = [

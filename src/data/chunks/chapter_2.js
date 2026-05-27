@@ -1,5 +1,5 @@
-// ICD-10-CM Chapter 2: Neoplasms
-// 1,539 codes — Auto-generated 2026-05-26
+// ICD-10-CM Chapter 2 — 1,539 codes
+// Updated: 2026-05-27
 // StormGlass Interactive Inc.
 
 export const CODES = [

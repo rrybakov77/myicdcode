@@ -1,5 +1,5 @@
-// ICD-10-CM Chapter 14: Diseases of the genitourinary system
-// 1,044 codes — Auto-generated 2026-05-26
+// ICD-10-CM Chapter 14 — 1,044 codes
+// Updated: 2026-05-27
 // StormGlass Interactive Inc.
 
 export const CODES = [

@@ -1,5 +1,5 @@
-// ICD-10-CM Chapter 12: Diseases of the skin and subcutaneous tissue
-// 1,206 codes — Auto-generated 2026-05-26
+// ICD-10-CM Chapter 12 — 1,206 codes
+// Updated: 2026-05-27
 // StormGlass Interactive Inc.
 
 export const CODES = [
