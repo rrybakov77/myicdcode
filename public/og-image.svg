@@ -1,0 +1,38 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A1628"/>
+      <stop offset="100%" style="stop-color:#0D2040"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Blue dot -->
+  <circle cx="96" cy="96" r="10" fill="#4A9EFF"/>
+  <circle cx="96" cy="96" r="20" fill="rgba(74,158,255,0.2)"/>
+  <!-- Logo -->
+  <text x="120" y="106" font-family="sans-serif" font-size="32" font-weight="600" fill="white">myICDCode.com</text>
+  <!-- Main headline -->
+  <text x="96" y="280" font-family="sans-serif" font-size="64" font-weight="700" fill="white">ICD-10-CM</text>
+  <text x="96" y="360" font-family="sans-serif" font-size="64" font-weight="700" fill="white">Code Lookup</text>
+  <!-- Subtext -->
+  <text x="96" y="430" font-family="sans-serif" font-size="28" fill="rgba(240,244,255,0.6)">98,000+ codes explained in plain English</text>
+  <text x="96" y="475" font-family="sans-serif" font-size="24" fill="rgba(240,244,255,0.4)">Free · FY 2026 current · Updated from CMS annually</text>
+  <!-- Badge -->
+  <rect x="96" y="520" width="180" height="44" rx="8" fill="rgba(74,158,255,0.15)" stroke="rgba(74,158,255,0.4)" stroke-width="1"/>
+  <text x="186" y="548" font-family="sans-serif" font-size="20" fill="#4A9EFF" text-anchor="middle">FY 2026</text>
+  <!-- Code example decorations -->
+  <rect x="820" y="200" width="300" height="60" rx="8" fill="rgba(74,158,255,0.08)" stroke="rgba(74,158,255,0.2)" stroke-width="1"/>
+  <text x="840" y="240" font-family="monospace" font-size="28" fill="#4A9EFF">I10</text>
+  <text x="900" y="240" font-family="sans-serif" font-size="18" fill="rgba(240,244,255,0.5)">Hypertension</text>
+  <rect x="820" y="280" width="300" height="60" rx="8" fill="rgba(74,158,255,0.08)" stroke="rgba(74,158,255,0.2)" stroke-width="1"/>
+  <text x="840" y="320" font-family="monospace" font-size="28" fill="#4A9EFF">E11.9</text>
+  <text x="920" y="320" font-family="sans-serif" font-size="18" fill="rgba(240,244,255,0.5)">Diabetes</text>
+  <rect x="820" y="360" width="300" height="60" rx="8" fill="rgba(74,158,255,0.08)" stroke="rgba(74,158,255,0.2)" stroke-width="1"/>
+  <text x="840" y="400" font-family="monospace" font-size="28" fill="#4A9EFF">J45.51</text>
+  <text x="940" y="400" font-family="sans-serif" font-size="18" fill="rgba(240,244,255,0.5)">Asthma</text>
+</svg>

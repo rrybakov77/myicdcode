@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { CODE_MAP } from '../data/allCodes.js';
 import { getRelatedCodes } from '../data/search.js';
+import SEO from '../components/SEO.jsx';
 import styles from './CodeDetail.module.css';
 
 const TABS = ['Overview', 'Coding notes', 'ICD-9 crosswalk', 'Related codes'];
@@ -28,7 +29,25 @@ export default function CodeDetail() {
     );
   }
 
+
   const related = getRelatedCodes(code);
+
+  const seoTitle = `${code.code} — ${code.shortDesc}`;
+  const seoDesc = `ICD-10-CM code ${code.code}: ${code.shortDesc}. ${code.plainEnglish ? code.plainEnglish.slice(0, 120) + '...' : ''} FY 2026 current.`;
+  const seoSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalCode",
+    "codeValue": code.code,
+    "codingSystem": "ICD-10-CM",
+    "name": code.shortDesc,
+    "description": code.plainEnglish || code.longDesc || code.shortDesc,
+    "url": `https://myicdcode.com/code/${code.code}`,
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "ICD-10-CM",
+      "url": "https://myicdcode.com"
+    }
+  };
 
   const copyCode = () => {
     navigator.clipboard?.writeText(code.code);
@@ -38,6 +57,12 @@ export default function CodeDetail() {
 
   return (
     <div className={styles.page}>
+      <SEO
+        title={seoTitle}
+        description={seoDesc}
+        canonical={`/code/${code.code}`}
+        schema={seoSchema}
+      />
       {/* Breadcrumb */}
       <div className={styles.breadcrumb}>
         <Link to="/">Home</Link>

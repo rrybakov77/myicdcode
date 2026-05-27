@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow non-content pages
+Disallow: /search?
+
+# Sitemap
+Sitemap: https://myicdcode.com/sitemap.xml
