@@ -1,5 +1,5 @@
 // ICD-10-CM Chapter 4 — 1,267 codes
-// Updated: 2026-05-27
+// Updated: 2026-05-30
 // StormGlass Interactive Inc.
 
 export const CODES = [
@@ -40014,8 +40014,8 @@ export const CODES = [
     "rawCode": "E8889",
     "shortDesc": "Other specified metabolic disorders",
     "longDesc": "Other specified metabolic disorders",
-    "plainEnglish": "Other specified metabolic disorders.",
-    "whoUses": "Used by healthcare providers to document this diagnosis for medical billing and coding purposes.",
+    "plainEnglish": "This code describes a metabolic disorder—a problem with how your body processes and uses energy, nutrients, or other essential substances—that doesn't fit into a more specific category. Metabolic disorders can affect how your body breaks down food, manages blood sugar, produces hormones, or handles various other chemical processes. Your doctor assigned this code when they identified a metabolic condition that needed treatment but wasn't specific enough to use a more precise diagnosis code.",
+    "whoUses": "Primary care physicians, endocrinologists, and internal medicine specialists use this code when documenting metabolic conditions that don't meet criteria for more specific diagnoses. It commonly appears on EOBs for patients being evaluated or treated for unusual metabolic issues, though it's often temporary until a more definitive diagnosis can be established.",
     "billable": true,
     "isNew": false,
     "isRevised": false,

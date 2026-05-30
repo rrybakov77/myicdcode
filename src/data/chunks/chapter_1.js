@@ -1,5 +1,5 @@
 // ICD-10-CM Chapter 1 — 695 codes
-// Updated: 2026-05-27
+// Updated: 2026-05-30
 // StormGlass Interactive Inc.
 
 export const CODES = [
@@ -20624,8 +20624,8 @@ export const CODES = [
     "rawCode": "A819",
     "shortDesc": "Atypical virus infection of central nervous system, unsp",
     "longDesc": "Atypical virus infection of central nervous system, unspecified",
-    "plainEnglish": "Atypical virus infection of central nervous system, unspecified.",
-    "whoUses": "Used by healthcare providers to document this diagnosis for medical billing and coding purposes.",
+    "plainEnglish": "This code indicates that you have an unusual or atypical viral infection affecting your brain or spinal cord, but doctors haven't identified the specific virus causing it. This type of infection can cause symptoms like headache, fever, confusion, weakness, or seizures, and requires careful monitoring because viral infections of the nervous system can be serious. The \"unspecified\" part means that standard testing either hasn't pinpointed the exact virus yet, or the infection doesn't fit neatly into known viral categories.",
+    "whoUses": "Neurologists, infectious disease specialists, and hospitalists use this code when a patient presents with signs of central nervous system infection that doesn't match common viral causes like herpes or measles. It typically appears in inpatient hospital settings or specialist referral contexts rather than routine outpatient care, and may appear on EOB statements when a patient has been hospitalized or had extensive neurological workup.",
     "billable": true,
     "isNew": false,
     "isRevised": false,
@@ -21154,8 +21154,8 @@ export const CODES = [
     "rawCode": "A840",
     "shortDesc": "Far Eastern tick-borne encephalitis",
     "longDesc": "Far Eastern tick-borne encephalitis [Russian spring-summer encephalitis]",
-    "plainEnglish": "Far Eastern tick-borne encephalitis [Russian spring-summer encephalitis].",
-    "whoUses": "Used by healthcare providers to document this diagnosis for medical billing and coding purposes.",
+    "plainEnglish": "Far Eastern tick-borne encephalitis is a serious brain infection caused by a virus transmitted through tick bites, primarily found in Russia and parts of Asia. This condition causes inflammation of the brain and surrounding tissues, leading to symptoms like high fever, severe headache, muscle weakness, and potentially paralysis or long-term neurological damage. The infection is seasonal, typically occurring in spring and summer when ticks are most active.",
+    "whoUses": "Infectious disease specialists and neurologists use this code when diagnosing patients with confirmed Far Eastern tick-borne encephalitis, typically in endemic regions or in travelers returning from affected areas. This code rarely appears on U.S. patient EOBs because the infection is geographically limited to far eastern Russia and surrounding regions and is extremely uncommon in North America.",
     "billable": true,
     "isNew": false,
     "isRevised": false,
@@ -22166,8 +22166,8 @@ export const CODES = [
     "rawCode": "A9232",
     "shortDesc": "West Nile virus infection with oth neurologic manifestation",
     "longDesc": "West Nile virus infection with other neurologic manifestation",
-    "plainEnglish": "West Nile virus infection with other neurologic manifestation.",
-    "whoUses": "Used by healthcare providers to document this diagnosis for medical billing and coding purposes.",
+    "plainEnglish": "West Nile virus is a mosquito-borne infection that has spread to your nervous system, causing neurological symptoms beyond just fever and body aches. This could include inflammation of the brain or spinal cord, weakness in your muscles, or difficulty with balance and coordination. While many people infected with West Nile virus have mild symptoms, this code indicates the virus has affected your brain and nervous system in some way.",
+    "whoUses": "Infectious disease specialists, neurologists, and emergency medicine physicians use this code when diagnosing West Nile virus patients with complications like encephalitis or meningitis. It commonly appears on EOB statements during late summer and fall when mosquito-borne West Nile transmission is most active.",
     "billable": true,
     "isNew": false,
     "isRevised": false,
