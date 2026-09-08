@@ -13,12 +13,12 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://myicdcode.com/" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://myicdcode.com/" />
     <meta property="og:site_name" content="myICDCode.com" />
     <meta property="og:title" content="myICDCode.com — ICD-10-CM Code Lookup, Plain English" />
-    <meta property="og:description" content="Search 98,000+ ICD-10-CM diagnosis codes explained in plain English. Free, fast, FY 2026 current. Perfect for patients reading EOBs and medical coders." />
+    <meta property="og:description" content="Search 98,000+ ICD-10-CM diagnosis codes explained in plain English. Free, fast, FY 2026 current." />
     <meta property="og:image" content="https://myicdcode.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -37,13 +37,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="myICDCode" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
 
-    <!-- Preconnect for performance -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- JSON-LD: WebSite with SearchAction (Google Sitelinks Searchbox) -->
+    <!-- JSON-LD: WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,13 +64,7 @@
         "@type": "Organization",
         "name": "StormGlass Interactive Inc.",
         "url": "https://stormglassinteractive.com",
-        "email": "support@stormglassinteractive.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "addressCountry": "US"
-        }
+        "email": "support@stormglassinteractive.com"
       }
     }
     </script>
@@ -94,18 +87,29 @@
       }
     }
     </script>
-  <!-- Theme init — runs before React to prevent flash -->
-  <script>
-    (function() {
-      var t = localStorage.getItem('myicdcode-theme') || 'navy';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7937609722850741" crossorigin="anonymous"></script>
+    <!-- Theme init — runs before React to prevent flash -->
+    <script>
+      (function() {
+        var t = localStorage.getItem('myicdcode-theme') || 'navy';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H19C2ZC6XC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H19C2ZC6XC');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7937609722850741" crossorigin="anonymous"></script>
+
   </head>
-  <body>
+  <body style="background:#0A1628;color:#F0F4FF;margin:0">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

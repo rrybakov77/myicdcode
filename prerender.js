@@ -191,10 +191,16 @@ function injectMeta(html, { title, desc, canonical, schema, bodyHtml }) {
   }
   // GA4 + AdSense — always present
   html = ensureTracking(html);
-  // Visible body content
+  // Visible body content — hidden by default, shown only for search bots (no-JS)
+  // This prevents the white flash when React mounts over the SSR content
   if (bodyHtml) {
     html = html.replace('<div id="root"></div>',
-      `<div id="root"></div>\n  <style>#ssr-content{display:block}#root:not(:empty)+style+#ssr-content,#root:not(:empty)~#ssr-content{display:none}</style>\n  ${bodyHtml}`);
+      `<div id="root"></div>
+  <style>
+    #ssr-content{display:none}
+    @media(scripting:none){#ssr-content{display:block!important}}
+  </style>
+  ${bodyHtml}`);
   }
   return html;
 }
