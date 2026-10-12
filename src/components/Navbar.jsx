@@ -77,6 +77,7 @@ export default function Navbar() {
         <Link to="/browse" className={styles.navLink}>Diagnosis</Link>
         <Link to="/browse-pcs" className={styles.navLink}>Procedures</Link>
         <Link to="/new-codes" className={styles.navLink}>New Codes</Link>
+        <Link to="/drg-grouper" className={styles.navLink}>DRG Grouper</Link>
         <Link to="/about" className={styles.navLink}>About</Link>
         <ThemeSwitcher />
       </div>

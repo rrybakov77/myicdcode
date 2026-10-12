@@ -8,6 +8,7 @@ import Browse from './pages/Browse.jsx';
 import BrowsePCS from './pages/BrowsePCS.jsx';
 import PCSDetail from './pages/PCSDetail.jsx';
 import NewCodes from './pages/NewCodes.jsx';
+import DRGGrouper from './pages/DRGGrouper.jsx';
 import About from './pages/About.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import TermsOfUse from './pages/TermsOfUse.jsx';
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/browse-pcs" element={<BrowsePCS />} />
           <Route path="/pcs/:code" element={<PCSDetail />} />
           <Route path="/new-codes" element={<NewCodes />} />
+          <Route path="/drg-grouper" element={<DRGGrouper />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />

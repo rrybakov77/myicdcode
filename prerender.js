@@ -393,6 +393,39 @@ function main() {
   count++;
   console.log('  ✓ Browse PCS page');
 
+  // DRG Grouper page
+  writeFile(join(DIST, 'drg-grouper', 'index.html'), injectMeta(template, {
+    title: 'DRG Grouper Tool — Medicare Reimbursement Lookup | myICDCode.com',
+    desc: 'Look up MS-DRG assignments and estimate Medicare IPPS inpatient reimbursement. FY 2027 relative weights for 70+ common DRGs.',
+    canonical: BASE_URL + '/drg-grouper',
+    schema: null,
+    bodyHtml: `<div id="ssr-content" style="font-family:sans-serif;max-width:900px;margin:0 auto;padding:24px 20px;color:#0f172a">
+      <h1 style="font-size:26px;font-weight:700;margin-bottom:8px">DRG Grouper &amp; Medicare Payment Estimator</h1>
+      <p style="color:#475569;margin-bottom:16px;font-size:15px">FY 2027 MS-DRG v44 — 768 Diagnosis Related Groups. Enter your principal diagnosis and complication level to estimate Medicare IPPS inpatient reimbursement. Effective October 1, 2026.</p>
+      <h2 style="font-size:18px;font-weight:600;margin:20px 0 8px">How DRG Assignment Works</h2>
+      <ol style="padding-left:20px;color:#475569;font-size:14px;line-height:1.8">
+        <li><strong>Principal Diagnosis</strong> — ICD-10-CM code selects the Major Diagnostic Category (MDC)</li>
+        <li><strong>Procedures</strong> — ICD-10-PCS codes determine surgical vs. medical pathway</li>
+        <li><strong>Complication Level</strong> — Secondary diagnoses scored as MCC, CC, or none</li>
+        <li><strong>Payment</strong> — DRG Relative Weight × Base Rate ($7,389) = estimated Medicare payment</li>
+      </ol>
+      <h2 style="font-size:18px;font-weight:600;margin:20px 0 8px">Common MS-DRGs (FY 2027)</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead><tr style="background:#f8fafc"><th style="padding:8px;border:1px solid #e2e8f0;text-align:left">DRG</th><th style="padding:8px;border:1px solid #e2e8f0;text-align:left">Description</th><th style="padding:8px;border:1px solid #e2e8f0">Weight</th><th style="padding:8px;border:1px solid #e2e8f0">Est. Payment</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0">871</td><td style="padding:8px;border:1px solid #e2e8f0">Septicemia or severe sepsis w/o MV &gt;96h w MCC</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center">1.9320</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center;color:#15803d">$14,280</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0">291</td><td style="padding:8px;border:1px solid #e2e8f0">Heart failure and shock w MCC</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center">1.2838</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center;color:#15803d">$9,487</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0">470</td><td style="padding:8px;border:1px solid #e2e8f0">Major hip and knee joint replacement w/o MCC</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center">1.9289</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center;color:#15803d">$14,257</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0">193</td><td style="padding:8px;border:1px solid #e2e8f0">Simple pneumonia and pleurisy w MCC</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center">1.3144</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center;color:#15803d">$9,714</td></tr>
+          <tr><td style="padding:8px;border:1px solid #e2e8f0">682</td><td style="padding:8px;border:1px solid #e2e8f0">Renal failure w MCC</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center">1.4810</td><td style="padding:8px;border:1px solid #e2e8f0;text-align:center;color:#15803d">$10,950</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px;font-size:12px;color:#94a3b8">Source: CMS FY 2027 IPPS Final Rule — Table 5. Base rate: $6,848.98 operating + $540.03 capital. Excludes IME, DSH, and outlier adjustments.</p>
+    </div>`,
+  }));
+  count++;
+  console.log('  ✓ DRG Grouper page');
+
   // Code pages
   for (const c of TOP_CODES) {
     const schema = [
