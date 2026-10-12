@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import SEO from '../components/SEO.jsx';
-import styles from './Browse.module.css';
+import styles from './BrowsePCS.module.css';
 
 const PCS_SECTIONS = [
   { slug: 'medical_and_surgical',     label: 'Medical and Surgical',                                    char: '0', count: 67416 },

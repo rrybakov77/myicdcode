@@ -1,0 +1,168 @@
+/* BrowsePCS.module.css */
+
+.page { min-height: 100vh; background: var(--bg, #f8fafc); }
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.pageTitle {
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: var(--text, #0f172a);
+}
+
+.pageSub {
+  font-size: 15px;
+  color: var(--muted, #64748b);
+  margin: 0 0 32px;
+}
+
+/* ── Section accordion list ───────────────────────────────── */
+.chapterList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chapterBlock {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border, #e2e8f0);
+  background: var(--card-bg, #fff);
+}
+
+.chapterBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: var(--text, #0f172a);
+  transition: background .12s;
+}
+
+.chapterBtn:hover { background: var(--bg-alt, #f1f5f9); }
+
+.chapterBtn.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.chNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #1a6eb5;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.chapterBtn.active .chNum {
+  background: #1d4ed8;
+}
+
+.chName {
+  flex: 1;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.chCount {
+  font-size: 12px;
+  color: var(--muted, #64748b);
+  white-space: nowrap;
+}
+
+.chArrow {
+  font-size: 11px;
+  color: var(--muted, #94a3b8);
+  flex-shrink: 0;
+}
+
+/* ── Expanded code list ───────────────────────────────────── */
+.codeList {
+  border-top: 1px solid var(--border, #e2e8f0);
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.loadingMsg {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted, #64748b);
+  font-size: 14px;
+}
+
+.codeRow {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 9px 18px;
+  text-decoration: none;
+  color: var(--text, #0f172a);
+  border-bottom: 1px solid var(--border, #f1f5f9);
+  transition: background .1s;
+  font-size: 13px;
+}
+
+.codeRow:last-child { border-bottom: none; }
+.codeRow:hover { background: var(--bg-alt, #f8fafc); }
+
+.codeNum {
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a6eb5;
+  white-space: nowrap;
+  min-width: 72px;
+}
+
+.codeLabel {
+  color: var(--text, #374151);
+  line-height: 1.4;
+}
+
+.more {
+  padding: 12px 18px;
+  font-size: 12px;
+  color: var(--muted, #94a3b8);
+  text-align: center;
+  background: var(--bg-alt, #f8fafc);
+  border-top: 1px solid var(--border, #e2e8f0);
+  margin: 0;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .page { background: #0f172a; }
+  .pageTitle { color: #f1f5f9; }
+  .pageSub { color: #94a3b8; }
+  .chapterBlock { background: #1e293b; border-color: #334155; }
+  .chapterBtn { color: #e2e8f0; }
+  .chapterBtn:hover { background: #263347; }
+  .chapterBtn.active { background: #1e3a5f; color: #93c5fd; }
+  .chNum { background: #1a6eb5; }
+  .chapterBtn.active .chNum { background: #2563eb; }
+  .chCount { color: #94a3b8; }
+  .chArrow { color: #64748b; }
+  .codeList { border-top-color: #334155; }
+  .codeRow { color: #e2e8f0; border-bottom-color: #263347; }
+  .codeRow:hover { background: #263347; }
+  .codeNum { color: #60a5fa; }
+  .codeLabel { color: #cbd5e1; }
+  .more { background: #1e293b; border-top-color: #334155; color: #64748b; }
+}
