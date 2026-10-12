@@ -49,3 +49,51 @@
 .navLink { padding: 6px 10px; font-size: 13px; color: var(--text-muted); border-radius: var(--radius-sm); transition: color .15s, background .15s; white-space: nowrap; }
 .navLink:hover { color: var(--text-primary); background: var(--surface); }
 @media (max-width: 600px) { .navLink { display: none; } }
+
+/* ── Hamburger ────────────────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: none; border: none;
+  cursor: pointer; padding: 6px; border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+.hamburger:hover { background: var(--surface); }
+@media (max-width: 600px) { .hamburger { display: flex; } }
+
+.barTop, .barMid, .barBot {
+  display: block;
+  width: 18px; height: 1.5px;
+  background: var(--text-muted);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+  transform-origin: center;
+}
+.barTopOpen { transform: translateY(6.5px) rotate(45deg); }
+.barMidOpen { opacity: 0; }
+.barBotOpen { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── Mobile drawer ────────────────────────────────────────────────── */
+.drawer {
+  display: none;
+  position: sticky; top: 56px; z-index: 99;
+  flex-direction: column;
+  background: var(--nav-bg);
+  border-bottom: 0.5px solid var(--border);
+  backdrop-filter: blur(12px);
+  padding: 8px 0;
+}
+@media (max-width: 600px) { .drawer { display: flex; } }
+
+.drawerLink {
+  padding: 12px var(--page-px);
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--border);
+  transition: background .1s, color .1s;
+}
+.drawerLink:last-child { border-bottom: none; }
+.drawerLink:hover { background: var(--surface); color: var(--text-primary); }
