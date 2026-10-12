@@ -336,6 +336,63 @@ function main() {
     count++;
   }
 
+  // New Codes page
+  writeFile(join(DIST, 'new-codes', 'index.html'), injectMeta(template, {
+    title: 'New ICD-10-CM Codes | FY 2027 Updates – myICDCode.com',
+    desc: 'FY 2027 ICD-10-CM update: 190 new codes, 30 deleted, 4 revised. Effective October 1, 2026. Full annual history back to FY 2023.',
+    canonical: BASE_URL + '/new-codes',
+    schema: null,
+    bodyHtml: `<div id="ssr-content" style="font-family:sans-serif;max-width:900px;margin:0 auto;padding:24px 20px;color:#0f172a">
+      <h1 style="font-size:26px;font-weight:700;margin-bottom:8px">ICD-10-CM Code Updates — FY 2027</h1>
+      <p style="color:#475569;margin-bottom:16px;font-size:15px">Effective <strong>October 1, 2026</strong>. The FY 2027 update adds <strong>190 new billable codes</strong>, removes 30, and revises 4 descriptions. Total: 74,879 billable codes.</p>
+      <h2 style="font-size:18px;font-weight:600;margin:16px 0 8px">Where New Codes Landed</h2>
+      <ul style="list-style:none;padding:0;margin:0">
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:8px"><strong>Ch. 19 – Injury &amp; Poisoning</strong> — +60 codes. Expanded toxic-effect coding.</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:8px"><strong>Ch. 15 – Pregnancy &amp; Childbirth</strong> — +44 codes. Vanishing twin syndrome (O31.4), ectopic pregnancy expansions.</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:8px"><strong>Ch. 13 – Musculoskeletal</strong> — +31 codes. VEXAS syndrome (M04.3), plantar fasciitis laterality.</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:8px"><strong>Ch. 21 – Z Codes</strong> — +16 codes. Burn pit exposure history; new underweight BMI codes Z68.18–Z68.19.</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:8px"><strong>Ch. 9 – Circulatory</strong> — +12 codes. Dilated cardiomyopathy specificity; I42.0 becomes non-billable parent.</li>
+      </ul>
+      <h2 style="font-size:18px;font-weight:600;margin:20px 0 8px">Annual Update History</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:14px">
+        <thead><tr style="background:#f8fafc;text-align:left"><th style="padding:10px;border:1px solid #e2e8f0">FY</th><th style="padding:10px;border:1px solid #e2e8f0">Effective</th><th style="padding:10px;border:1px solid #e2e8f0">Added</th><th style="padding:10px;border:1px solid #e2e8f0">Deleted</th><th style="padding:10px;border:1px solid #e2e8f0">Total</th></tr></thead>
+        <tbody>
+          <tr style="background:#eff6ff"><td style="padding:10px;border:1px solid #e2e8f0"><strong>FY 2027</strong> ★</td><td style="padding:10px;border:1px solid #e2e8f0">Oct 1, 2026</td><td style="padding:10px;border:1px solid #e2e8f0;color:#22a555">+190</td><td style="padding:10px;border:1px solid #e2e8f0;color:#dc3545">-30</td><td style="padding:10px;border:1px solid #e2e8f0">74,879</td></tr>
+          <tr><td style="padding:10px;border:1px solid #e2e8f0">FY 2026</td><td style="padding:10px;border:1px solid #e2e8f0">Oct 1, 2025</td><td style="padding:10px;border:1px solid #e2e8f0;color:#22a555">+487</td><td style="padding:10px;border:1px solid #e2e8f0;color:#dc3545">-28</td><td style="padding:10px;border:1px solid #e2e8f0">98,186</td></tr>
+          <tr><td style="padding:10px;border:1px solid #e2e8f0">FY 2025</td><td style="padding:10px;border:1px solid #e2e8f0">Oct 1, 2024</td><td style="padding:10px;border:1px solid #e2e8f0;color:#22a555">+395</td><td style="padding:10px;border:1px solid #e2e8f0;color:#dc3545">-25</td><td style="padding:10px;border:1px solid #e2e8f0">97,699</td></tr>
+          <tr><td style="padding:10px;border:1px solid #e2e8f0">FY 2024</td><td style="padding:10px;border:1px solid #e2e8f0">Oct 1, 2023</td><td style="padding:10px;border:1px solid #e2e8f0;color:#22a555">+395</td><td style="padding:10px;border:1px solid #e2e8f0;color:#dc3545">-22</td><td style="padding:10px;border:1px solid #e2e8f0">97,304</td></tr>
+          <tr><td style="padding:10px;border:1px solid #e2e8f0">FY 2023</td><td style="padding:10px;border:1px solid #e2e8f0">Oct 1, 2022</td><td style="padding:10px;border:1px solid #e2e8f0;color:#22a555">+1,176</td><td style="padding:10px;border:1px solid #e2e8f0;color:#dc3545">-250</td><td style="padding:10px;border:1px solid #e2e8f0">96,909</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px;font-size:12px;color:#94a3b8">Source: CMS ICD-10 Code Files · cms.gov · Updated each October 1</p>
+    </div>`,
+  }));
+  count++;
+  console.log('  ✓ New Codes page');
+
+  // Browse PCS
+  writeFile(join(DIST, 'browse-pcs', 'index.html'), injectMeta(template, {
+    title: 'Browse ICD-10-PCS Procedure Codes — myICDCode.com',
+    desc: 'Browse all 79,256 ICD-10-PCS inpatient procedure codes by section. FY 2027, sourced from CMS.',
+    canonical: BASE_URL + '/browse-pcs',
+    schema: null,
+    bodyHtml: `<div id="ssr-content" style="font-family:sans-serif;max-width:900px;margin:0 auto;padding:24px 20px;color:#0f172a">
+      <h1 style="font-size:26px;font-weight:700;margin-bottom:8px">ICD-10-PCS Procedure Codes</h1>
+      <p style="color:#475569;margin-bottom:20px;font-size:15px">79,256 inpatient procedure codes across 17 sections. FY 2027 — effective October 1, 2026.</p>
+      <p style="font-size:14px;color:#475569;margin-bottom:20px">ICD-10-PCS codes are used for inpatient hospital procedures (not outpatient). Each 7-character code specifies section, body system, root operation, body part, approach, device, and qualifier.</p>
+      <ul style="list-style:none;padding:0">
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:6px"><strong>0</strong> — Medical and Surgical (67,416 codes)</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:6px"><strong>1</strong> — Obstetrics (360 codes)</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:6px"><strong>B</strong> — Imaging (3,080 codes)</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:6px"><strong>D</strong> — Radiation Therapy (2,114 codes)</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:6px"><strong>X</strong> — New Technology (1,362 codes)</li>
+        <li style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:6px">…and 12 more sections</li>
+      </ul>
+    </div>`,
+  }));
+  count++;
+  console.log('  ✓ Browse PCS page');
+
   // Code pages
   for (const c of TOP_CODES) {
     const schema = [

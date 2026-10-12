@@ -12,8 +12,10 @@ const MAX_PER_SITEMAP = 45000; // Stay under 50k limit with buffer
 // ── Static pages ──────────────────────────────────────────────
 const STATIC_URLS = [
   { url: '/',          priority: '1.0', changefreq: 'weekly'  },
-  { url: '/browse',    priority: '0.9', changefreq: 'monthly' },
-  { url: '/about',     priority: '0.5', changefreq: 'monthly' },
+  { url: '/browse',      priority: '0.9', changefreq: 'monthly' },
+  { url: '/browse-pcs', priority: '0.8', changefreq: 'monthly' },
+  { url: '/new-codes',  priority: '0.8', changefreq: 'monthly' },
+  { url: '/about',      priority: '0.5', changefreq: 'monthly' },
   { url: '/privacy',   priority: '0.3', changefreq: 'yearly'  },
   { url: '/terms',     priority: '0.3', changefreq: 'yearly'  },
   { url: '/advertise', priority: '0.4', changefreq: 'monthly' },

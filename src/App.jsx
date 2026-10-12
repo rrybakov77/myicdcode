@@ -5,6 +5,9 @@ import Home from './pages/Home.jsx';
 import Search from './pages/Search.jsx';
 import CodeDetail from './pages/CodeDetail.jsx';
 import Browse from './pages/Browse.jsx';
+import BrowsePCS from './pages/BrowsePCS.jsx';
+import PCSDetail from './pages/PCSDetail.jsx';
+import NewCodes from './pages/NewCodes.jsx';
 import About from './pages/About.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import TermsOfUse from './pages/TermsOfUse.jsx';
@@ -21,6 +24,9 @@ export default function App() {
           <Route path="/search" element={<Search />} />
           <Route path="/code/:code" element={<CodeDetail />} />
           <Route path="/browse" element={<Browse />} />
+          <Route path="/browse-pcs" element={<BrowsePCS />} />
+          <Route path="/pcs/:code" element={<PCSDetail />} />
+          <Route path="/new-codes" element={<NewCodes />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
