@@ -19,7 +19,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const ref = useRef(null);
-  const menuRef = useRef(null);
+  const navRef = useRef(null);
 
   useEffect(() => {
     if (query.length >= 2) {
@@ -34,7 +34,7 @@ export default function Navbar() {
   useEffect(() => {
     const handler = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false);
-      if (menuRef.current && !menuRef.current.contains(e.target)) setMenuOpen(false);
+      if (navRef.current && !navRef.current.contains(e.target)) setMenuOpen(false);
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
@@ -53,7 +53,7 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <>
+    <div ref={navRef}>
       <nav className={styles.nav}>
         <Link to="/" className={styles.logo}>
           <span className={styles.logoDot} />
@@ -110,7 +110,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {menuOpen && (
-        <div className={styles.drawer} ref={menuRef}>
+        <div className={styles.drawer}>
           {NAV_LINKS.map(({ to, label }) => (
             <Link key={to} to={to} className={styles.drawerLink} onClick={closeMenu}>
               {label}
@@ -118,6 +118,6 @@ export default function Navbar() {
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
