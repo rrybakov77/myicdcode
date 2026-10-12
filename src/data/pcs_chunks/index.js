@@ -1,12 +1,18 @@
 // ICD-10-PCS chunk index — auto-generated
 export { pcs_administration } from './section_administration.js';
+export { pcs_chiropractic } from './section_chiropractic.js';
+export { pcs_extracorporeal_or_systemic_assistance_and_performance } from './section_extracorporeal_or_systemic_assistance_and_performance.js';
 export { pcs_extracorporeal_or_systemic_therapies } from './section_extracorporeal_or_systemic_therapies.js';
+export { pcs_imaging } from './section_imaging.js';
+export { pcs_measurement_and_monitoring } from './section_measurement_and_monitoring.js';
+export { pcs_medical_and_surgical } from './section_medical_and_surgical.js';
+export { pcs_mental_health } from './section_mental_health.js';
+export { pcs_new_technology } from './section_new_technology.js';
+export { pcs_nuclear_medicine } from './section_nuclear_medicine.js';
 export { pcs_obstetrics } from './section_obstetrics.js';
+export { pcs_osteopathic } from './section_osteopathic.js';
 export { pcs_other_procedures } from './section_other_procedures.js';
-
-export const PCS_SECTIONS = [
-  { slug: 'administration', section: 'Administration', count: 2, file: 'section_administration.js' },
-  { slug: 'extracorporeal_or_systemic_therapies', section: 'Extracorporeal or Systemic Therapies', count: 1, file: 'section_extracorporeal_or_systemic_therapies.js' },
-  { slug: 'obstetrics', section: 'Obstetrics', count: 1, file: 'section_obstetrics.js' },
-  { slug: 'other_procedures', section: 'Other Procedures', count: 1, file: 'section_other_procedures.js' },
-];
+export { pcs_physical_rehabilitation_and_diagnostic_audiology } from './section_physical_rehabilitation_and_diagnostic_audiology.js';
+export { pcs_placement } from './section_placement.js';
+export { pcs_radiation_therapy } from './section_radiation_therapy.js';
+export { pcs_substance_abuse_treatment } from './section_substance_abuse_treatment.js';
