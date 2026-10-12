@@ -38,7 +38,7 @@ export default function Home() {
       {/* Update banner */}
       <div className={styles.updateBanner}>
         <span className={styles.bannerDot} />
-        <strong>FY 2026 active</strong> — 487 new codes, 38 revisions effective October 1, 2025
+        <strong>FY 2027 active</strong> — 190 new codes, 4 revisions effective October 1, 2026
       </div>
 
       {/* Hero */}
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
         <div className={styles.heroContent}>
           <div className={styles.heroEyebrow}>
-            ICD-10-CM · FY 2026 · {FY_STATS.totalCodes?.toLocaleString()} codes
+            ICD-10-CM · FY 2027 · {FY_STATS.totalCodes?.toLocaleString()} codes
           </div>
           <h1 className={styles.heroTitle}>
             Decode any medical<br />diagnosis code — plain English
@@ -102,8 +102,8 @@ export default function Home() {
           <div className={styles.statLabel}>Code chapters</div>
         </div>
         <div className={styles.statCell}>
-          <div className={`${styles.statNum} ${styles.statNew}`}>487</div>
-          <div className={styles.statLabel}>New in FY 2026</div>
+          <div className={`${styles.statNum} ${styles.statNew}`}>190</div>
+          <div className={styles.statLabel}>New in FY 2027</div>
         </div>
         <div className={styles.statCell}>
           <div className={styles.statNum}>Oct 1</div>
